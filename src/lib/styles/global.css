@@ -1,0 +1,79 @@
+/* Global reset and base styles */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 18px;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+body {
+	min-height: 100vh;
+	line-height: 1.8;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+}
+
+input, button, textarea, select {
+	font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+/* Accessibility: focus visible */
+:focus-visible {
+	outline: 3px solid currentColor;
+	outline-offset: 3px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Print styles for poems */
+@media print {
+	nav, footer, .no-print {
+		display: none !important;
+	}
+
+	body {
+		font-size: 14pt;
+		line-height: 2;
+		color: #000;
+		background: #fff;
+	}
+
+	.verse-line {
+		page-break-inside: avoid;
+	}
+}

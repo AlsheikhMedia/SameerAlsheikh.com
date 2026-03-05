@@ -1,0 +1,123 @@
+/* ============================================
+   Self-hosted Arabic Fonts
+   All files served from /fonts/ (no external CDN)
+   ============================================ */
+
+/* --- Amiri (الأميري) --- */
+/* Classical Naskh — revival of the Bulaq Press typeface. Ideal for poetry diwans. */
+
+@font-face {
+	font-family: 'Amiri';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/amiri/amiri-normal-400.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Amiri';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/amiri/amiri-normal-700.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Amiri';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/amiri/amiri-italic-400.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Amiri';
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/amiri/amiri-italic-700.woff2') format('woff2');
+}
+
+/* --- Noto Naskh Arabic (نوتو نسخ) --- */
+/* Google's clean, modern Naskh. Optimized for screen readability. Variable weight. */
+
+@font-face {
+	font-family: 'Noto Naskh Arabic';
+	font-style: normal;
+	font-weight: 400 700;
+	font-display: swap;
+	src: url('/fonts/noto-naskh/noto-naskh-normal-400.woff2') format('woff2');
+}
+
+/* --- Aref Ruqaa (عارف رقعة) --- */
+/* Calligraphic Ruq'ah script. Elegant handwritten feel. */
+
+@font-face {
+	font-family: 'Aref Ruqaa';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/aref-ruqaa/aref-ruqaa-normal-400.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Aref Ruqaa';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/aref-ruqaa/aref-ruqaa-normal-700.woff2') format('woff2');
+}
+
+/* --- Cairo (القاهرة) --- */
+/* Popular modern Arabic sans-serif. Clean, geometric, highly readable. Variable weight. */
+
+@font-face {
+	font-family: 'Cairo';
+	font-style: normal;
+	font-weight: 400 700;
+	font-display: swap;
+	src: url('/fonts/cairo/cairo-normal-400.woff2') format('woff2');
+}
+
+/* --- IBM Plex Sans Arabic --- */
+/* Modern geometric sans-serif. For UI elements. */
+
+@font-face {
+	font-family: 'IBM Plex Sans Arabic';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url('/fonts/ibm-plex-arabic/ibm-plex-arabic-normal-300.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'IBM Plex Sans Arabic';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/ibm-plex-arabic/ibm-plex-arabic-normal-400.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'IBM Plex Sans Arabic';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url('/fonts/ibm-plex-arabic/ibm-plex-arabic-normal-500.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'IBM Plex Sans Arabic';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('/fonts/ibm-plex-arabic/ibm-plex-arabic-normal-600.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'IBM Plex Sans Arabic';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/ibm-plex-arabic/ibm-plex-arabic-normal-700.woff2') format('woff2');
+}
