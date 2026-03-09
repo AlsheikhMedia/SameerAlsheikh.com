@@ -7,10 +7,19 @@ node_modules
 .wrangler
 /.svelte-kit
 /build
+dist/
+.astro/
+
+# Python
+__pycache__/
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Crawler
+scripts/crawler/.venv/
+scripts/crawler/storage/
 
 # Env
 .env

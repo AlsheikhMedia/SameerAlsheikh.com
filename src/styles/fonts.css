@@ -3,8 +3,7 @@
    All files served from /fonts/ (no external CDN)
    ============================================ */
 
-/* --- Amiri (الأميري) --- */
-/* Classical Naskh — revival of the Bulaq Press typeface. Ideal for poetry diwans. */
+/* --- Amiri --- */
 
 @font-face {
 	font-family: 'Amiri';
@@ -38,8 +37,7 @@
 	src: url('/fonts/amiri/amiri-italic-700.woff2') format('woff2');
 }
 
-/* --- Noto Naskh Arabic (نوتو نسخ) --- */
-/* Google's clean, modern Naskh. Optimized for screen readability. Variable weight. */
+/* --- Noto Naskh Arabic --- */
 
 @font-face {
 	font-family: 'Noto Naskh Arabic';
@@ -49,8 +47,7 @@
 	src: url('/fonts/noto-naskh/noto-naskh-normal-400.woff2') format('woff2');
 }
 
-/* --- Aref Ruqaa (عارف رقعة) --- */
-/* Calligraphic Ruq'ah script. Elegant handwritten feel. */
+/* --- Aref Ruqaa --- */
 
 @font-face {
 	font-family: 'Aref Ruqaa';
@@ -68,8 +65,7 @@
 	src: url('/fonts/aref-ruqaa/aref-ruqaa-normal-700.woff2') format('woff2');
 }
 
-/* --- Cairo (القاهرة) --- */
-/* Popular modern Arabic sans-serif. Clean, geometric, highly readable. Variable weight. */
+/* --- Cairo --- */
 
 @font-face {
 	font-family: 'Cairo';
@@ -80,7 +76,6 @@
 }
 
 /* --- IBM Plex Sans Arabic --- */
-/* Modern geometric sans-serif. For UI elements. */
 
 @font-face {
 	font-family: 'IBM Plex Sans Arabic';

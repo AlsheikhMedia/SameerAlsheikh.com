@@ -1,0 +1,45 @@
+---
+import '../styles/fonts.css';
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+	canonical?: string;
+	ogType?: string;
+}
+
+const { title, description, canonical, ogType = 'website' } = Astro.props;
+const siteUrl = 'https://sameeralsheikh.com';
+const resolvedCanonical = canonical ?? new URL(Astro.url.pathname, siteUrl).href;
+const resolvedDescription = description ?? 'ديوان الشاعر سمير الشيخ حسين — أكثر من ٣٠٠ قصيدة في الغزل والحكمة والوطنيات والرثاء';
+---
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+		<meta name="description" content={resolvedDescription} />
+		<link rel="canonical" href={resolvedCanonical} />
+
+		<!-- Open Graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={resolvedDescription} />
+		<meta property="og:type" content={ogType} />
+		<meta property="og:url" content={resolvedCanonical} />
+		<meta property="og:locale" content="ar_AR" />
+		<meta property="og:site_name" content="سمير الشيخ حسين" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={resolvedDescription} />
+	</head>
+	<body>
+		<a href="#main-content" class="skip-link">تخطَّ إلى المحتوى</a>
+		<slot />
+	</body>
+</html>

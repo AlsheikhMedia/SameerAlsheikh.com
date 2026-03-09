@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { bioText } from '../data/poems';
+---
+
+<Layout
+	title="عن الشاعر سمير الشيخ حسين — ديوان شعر عربي أصيل"
+	description="نبذة عن حياة الشاعر سمير الشيخ حسين — شاعر عربي من مواليد ١٩٥١ أثرى الأدب العربي بأكثر من ٣٠٠ قصيدة في الغزل والحكمة والوطنيات والرثاء"
+>
+	<div class="page">
+		<Header />
+
+		<main id="main-content" class="content-page">
+			<div class="content-container">
+				<div class="rule"></div>
+				<h1 class="page-title">عن الشاعر</h1>
+
+				<div class="bio-content">
+					{bioText.split('\n\n').map(paragraph => (
+						<p>{paragraph}</p>
+					))}
+				</div>
+
+				<nav class="bottom-nav" aria-label="العودة">
+					<a href="/" class="back-link">
+						<span class="arrow" aria-hidden="true">&rarr;</span>
+						العودة إلى الرئيسية
+					</a>
+				</nav>
+			</div>
+		</main>
+
+		<Footer />
+	</div>
+</Layout>
+
+<style>
+	.content-page {
+		padding: 4rem 2rem 6rem;
+		background-color: #fafaf7;
+	}
+
+	.content-container {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	.page-title {
+		font-family: 'Amiri', serif;
+		font-size: 2.8rem;
+		font-weight: 700;
+		color: #2c2925;
+		text-align: center;
+		margin: 1.5rem 0 3rem;
+		line-height: 1.2;
+	}
+
+	.bio-content p {
+		font-family: 'IBM Plex Sans Arabic', sans-serif;
+		font-size: 1.05rem;
+		line-height: 2.2;
+		color: #2c2925;
+		text-align: justify;
+		margin-bottom: 1.5rem;
+	}
+
+	.bottom-nav {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
+	.back-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-family: 'IBM Plex Sans Arabic', sans-serif;
+		font-size: 0.95rem;
+		font-weight: 500;
+		color: #7a2532;
+		text-decoration: none;
+		min-height: 44px;
+		transition: gap 0.2s ease;
+	}
+
+	.back-link:hover {
+		gap: 0.75rem;
+	}
+
+	@media (max-width: 768px) {
+		.content-page {
+			padding: 3rem 1.5rem 4rem;
+		}
+
+		.page-title {
+			font-size: 2.2rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.content-page {
+			padding: 2rem 1rem 3rem;
+		}
+
+		.page-title {
+			font-size: 1.8rem;
+		}
+
+		.bio-content p {
+			text-align: right;
+		}
+	}
+</style>
