@@ -1265,7 +1265,7 @@ export const poems: Poem[] = [
 		],
 	},
 	{
-		slug: 'الأصالة',
+		slug: 'الأصالة-في-الإنسان',
 		title: 'الأصالة',
 		category: 'wijdaniya',
 		date: '2012-07-08',
