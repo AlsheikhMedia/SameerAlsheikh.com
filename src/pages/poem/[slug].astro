@@ -340,16 +340,16 @@ const poemDescription = full.length <= 160
 			const type = (btn as HTMLElement).dataset.share;
 			switch (type) {
 				case 'whatsapp':
-					window.open(`https://wa.me/?text=${encodeURIComponent(shareText + '\n\n' + shareUrl)}`, '_blank', 'noopener');
+					window.open(`https://wa.me/?text=${encodeURIComponent(shareText + '\n\n' + shareUrl)}`, '_blank', 'noopener,noreferrer');
 					break;
 				case 'telegram':
-					window.open(`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`, '_blank', 'noopener');
+					window.open(`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`, '_blank', 'noopener,noreferrer');
 					break;
 				case 'x':
-					window.open(`https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank', 'noopener');
+					window.open(`https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank', 'noopener,noreferrer');
 					break;
 				case 'facebook':
-					window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'noopener');
+					window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'noopener,noreferrer');
 					break;
 				case 'email':
 					window.location.href = `mailto:?subject=${encodeURIComponent(poemTitle + ' — سمير الشيخ')}&body=${encodeURIComponent(shareText + '\n\n' + shareUrl)}`;
