@@ -43,7 +43,7 @@
 	font-family: 'Noto Naskh Arabic';
 	font-style: normal;
 	font-weight: 400 700;
-	font-display: swap;
+	font-display: optional;
 	src: url('/fonts/noto-naskh/noto-naskh-normal-400.woff2') format('woff2');
 }
 
@@ -53,7 +53,7 @@
 	font-family: 'Aref Ruqaa';
 	font-style: normal;
 	font-weight: 400;
-	font-display: swap;
+	font-display: optional;
 	src: url('/fonts/aref-ruqaa/aref-ruqaa-normal-400.woff2') format('woff2');
 }
 
@@ -61,7 +61,7 @@
 	font-family: 'Aref Ruqaa';
 	font-style: normal;
 	font-weight: 700;
-	font-display: swap;
+	font-display: optional;
 	src: url('/fonts/aref-ruqaa/aref-ruqaa-normal-700.woff2') format('woff2');
 }
 
@@ -71,7 +71,7 @@
 	font-family: 'Cairo';
 	font-style: normal;
 	font-weight: 400 700;
-	font-display: swap;
+	font-display: optional;
 	src: url('/fonts/cairo/cairo-normal-400.woff2') format('woff2');
 }
 
