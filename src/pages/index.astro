@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
 import PoemCard from '../components/PoemCard.astro';
-import { featuredPoems, bioText, categories } from '../data/poems';
+import { featuredPoems, categories } from '../data/poems';
 
 const heroVerse = featuredPoems[0]?.verses[0];
 ---
@@ -68,15 +68,6 @@ const heroVerse = featuredPoems[0]?.verses[0];
 				</div>
 			</section>
 
-			<!-- About Preview -->
-			<section id="about" class="about-section">
-				<div class="about-container">
-					<h2 class="section-title">عن الشاعر</h2>
-					<div class="rule"></div>
-					<p class="about-text">{bioText}</p>
-					<a href="#about" class="read-more">المزيد</a>
-				</div>
-			</section>
 		</main>
 
 		<Footer />
@@ -247,41 +238,6 @@ const heroVerse = featuredPoems[0]?.verses[0];
 		color: #7a2532;
 	}
 
-	/* ---------- About Preview ---------- */
-
-	.about-section {
-		padding: 6rem 2rem;
-		background-color: #f2f0eb;
-	}
-
-	.about-container {
-		max-width: 700px;
-		margin: 0 auto;
-		text-align: center;
-	}
-
-	.about-section :global(.section-title) {
-		margin: 0 0 1.5rem;
-	}
-
-	.about-text {
-		font-family: 'IBM Plex Sans Arabic', sans-serif;
-		font-size: 1.05rem;
-		line-height: 2.2;
-		color: #2c2925;
-		margin: 2.5rem 0;
-		text-align: justify;
-	}
-
-	.read-more {
-		font-family: 'IBM Plex Sans Arabic', sans-serif;
-		font-size: 0.9rem;
-		font-weight: 500;
-		color: #7a2532;
-		text-decoration: none;
-		display: inline-block;
-	}
-
 	/* ---------- Responsive ---------- */
 
 	@media (max-width: 1024px) {
@@ -301,10 +257,6 @@ const heroVerse = featuredPoems[0]?.verses[0];
 
 		.hero-subtitle {
 			font-size: 1rem;
-		}
-
-		.about-section {
-			padding: 4rem 1.5rem;
 		}
 
 		.verse-line {
@@ -339,10 +291,6 @@ const heroVerse = featuredPoems[0]?.verses[0];
 		.sadr,
 		.ajz {
 			text-align: center;
-		}
-
-		.about-text {
-			text-align: right;
 		}
 	}
 
