@@ -4,12 +4,13 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import PoemCard from '../../components/PoemCard.astro';
 import { poems, categories, type Poem } from '../../data/poems';
-import { toArabicDigits } from '../../lib/utils';
+import { toArabicDigits, jsonLd } from '../../lib/utils';
 
 export function getStaticPaths() {
 	return Object.keys(categories).map(slug => ({
 		params: { slug },
 		props: {
+			categorySlug: slug,
 			categoryName: categories[slug],
 			categoryPoems: poems.filter(p => p.category === slug),
 		},
@@ -17,17 +18,27 @@ export function getStaticPaths() {
 }
 
 interface Props {
+	categorySlug: string;
 	categoryName: string;
 	categoryPoems: Poem[];
 }
 
-const { categoryName, categoryPoems } = Astro.props;
+const { categorySlug, categoryName, categoryPoems } = Astro.props;
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://sameeralsheikh.com/' },
+		{ '@type': 'ListItem', position: 2, name: categoryName, item: `https://sameeralsheikh.com/category/${categorySlug}` },
+	],
+};
 ---
 
 <Layout
 	title={`قصائد ${categoryName} — من ديوان الشاعر سمير الشيخ حسين`}
 	description={`تصفَّح واقرأ ${toArabicDigits(categoryPoems.length)} قصيدة في باب ${categoryName} من ديوان الشاعر سمير الشيخ حسين — أكثر من ٣٠٠ قصيدة عربية أصيلة في الغزل والحكمة والوطنيات والرثاء`}
 >
+	<script slot="head" type="application/ld+json" set:html={jsonLd(breadcrumbSchema)}></script>
 	<div class="page">
 		<Header />
 
@@ -39,7 +50,7 @@ const { categoryName, categoryPoems } = Astro.props;
 				<span class="current" aria-current="page">{categoryName}</span>
 			</nav>
 			<div class="rule"></div>
-			<h1 class="category-title">{categoryName}</h1>
+			<h1 class="category-title">قصائد {categoryName}</h1>
 			<p class="category-count">{toArabicDigits(categoryPoems.length)} قصيدة</p>
 			<div class="rule"></div>
 		</section>

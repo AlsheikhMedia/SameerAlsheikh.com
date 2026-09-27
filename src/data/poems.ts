@@ -647,7 +647,7 @@ export const poems: Poem[] = [
 		],
 	},
 	{
-		slug: 'الأصالة',
+		slug: 'الأم-تسقي-براعمها',
 		title: 'الأم تسقي براعمها',
 		category: 'wijdaniya',
 		date: '2012-07-04',
@@ -1265,7 +1265,7 @@ export const poems: Poem[] = [
 		],
 	},
 	{
-		slug: 'الأصالة-في-الإنسان',
+		slug: 'الأصالة',
 		title: 'الأصالة',
 		category: 'wijdaniya',
 		date: '2012-07-08',

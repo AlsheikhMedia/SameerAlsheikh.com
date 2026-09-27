@@ -1,0 +1,27 @@
+# ديوان الشاعر سمير الشيخ حسين
+
+> Arabic poetry collection (ديوان) by the poet Sameer Alsheikh Hussein, written on classical Arabic meters (بحور الخليل بن أحمد). All content is Arabic (RTL).
+
+## الشاعر (The Poet)
+
+سمير الشيخ حسين — شاعر عربي. This site hosts his collected poems (diwan).
+
+## الأبواب (Categories)
+
+- غزل (ghazal) — love poetry: /category/ghazal
+- وجدانية (wijdaniya) — emotional: /category/wijdaniya
+- وطنية (wataniya) — patriotic: /category/wataniya
+- مدح (madh) — praise: /category/madh
+- رثاء (ritha) — elegy: /category/ritha
+- هجاء (hija) — satire: /category/hija
+- روحية (ruhiya) — spiritual: /category/ruhiya
+
+## القصائد (Poems)
+
+Each poem lives at /poem/<slug> and consists of numbered verses (أبيات). Each verse has two hemistichs: الصدر (sadr) and العجز (ajz).
+
+## Links
+
+- Sitemap: https://sameeralsheikh.com/sitemap-index.xml
+- Contact: https://sameeralsheikh.com/contact
+- Privacy: https://sameeralsheikh.com/privacy

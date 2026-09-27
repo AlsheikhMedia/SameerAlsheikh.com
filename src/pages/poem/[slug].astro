@@ -45,6 +45,15 @@ const poemSchema = {
 	url: poemUrl,
 	mainEntityOfPage: poemUrl,
 };
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://sameeralsheikh.com/' },
+		{ '@type': 'ListItem', position: 2, name: categoryName, item: `https://sameeralsheikh.com/category/${poem.category}` },
+		{ '@type': 'ListItem', position: 3, name: poem.title, item: poemUrl },
+	],
+};
 ---
 
 <Layout
@@ -52,7 +61,8 @@ const poemSchema = {
 	description={poemDescription}
 	ogType="article"
 >
-	<script slot="head" type="application/ld+json" set:html={jsonLd(poemSchema)} />
+	<script slot="head" type="application/ld+json" set:html={jsonLd(poemSchema)}></script>
+	<script slot="head" type="application/ld+json" set:html={jsonLd(breadcrumbSchema)}></script>
 	<div class="page" data-poem-slug={poem.slug} data-poem-title={poem.title} data-first-sadr={poem.verses[0].sadr} data-first-ajz={poem.verses[0].ajz}>
 		<Header />
 

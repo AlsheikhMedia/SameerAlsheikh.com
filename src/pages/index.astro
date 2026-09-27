@@ -12,33 +12,33 @@ const heroVerse = featuredPoems[0]?.verses[0];
 	description="ديوان الشاعر سمير الشيخ حسين — أكثر من ٣٠٠ قصيدة في الغزل والحكمة والوطنيات والرثاء. شعر عربي أصيل على بحور الخليل بن أحمد."
 >
 	<div class="page">
-		<!-- Hero Section -->
-		<section id="hero" class="hero">
-			<div class="hero-content">
-				<div class="rule"></div>
-				<h1 class="hero-name">سمير الشيخ</h1>
-				<p class="hero-subtitle">شاعر عربي</p>
-
-				{heroVerse && (
-					<div class="hero-verse">
-						<div class="verse-line">
-							<span class="sadr">{heroVerse.sadr}</span>
-							<span class="verse-divider"></span>
-							<span class="ajz">{heroVerse.ajz}</span>
-						</div>
-					</div>
-				)}
-
-				<div class="rule"></div>
-				<a href="#poems" class="explore-link">
-					استكشف الديوان
-					<span class="arrow" aria-hidden="true">&larr;</span>
-				</a>
-			</div>
-		</section>
-
-		<!-- Featured Poems Section -->
 		<main id="main-content">
+			<!-- Hero Section -->
+			<section id="hero" class="hero">
+				<div class="hero-content">
+					<div class="rule"></div>
+					<h1 class="hero-name">سمير الشيخ حسين</h1>
+					<p class="hero-subtitle">شاعر عربي</p>
+
+					{heroVerse && (
+						<div class="hero-verse">
+							<div class="verse-line">
+								<span class="sadr">{heroVerse.sadr}</span>
+								<span class="verse-divider"></span>
+								<span class="ajz">{heroVerse.ajz}</span>
+							</div>
+						</div>
+					)}
+
+					<div class="rule"></div>
+					<a href="#poems" class="explore-link">
+						استكشف الديوان
+						<span class="arrow" aria-hidden="true">&larr;</span>
+					</a>
+				</div>
+			</section>
+
+			<!-- Featured Poems Section -->
 			<section id="poems" class="poems-section">
 				<div class="section-container">
 					<div class="rule"></div>
@@ -67,7 +67,6 @@ const heroVerse = featuredPoems[0]?.verses[0];
 					</nav>
 				</div>
 			</section>
-
 		</main>
 
 		<Footer />
