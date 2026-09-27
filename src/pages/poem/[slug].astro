@@ -32,6 +32,19 @@ const poemDescription = full.length <= 160
 		: withPadding.length <= 160
 			? withPadding
 			: withPadding.slice(0, 157) + '...';
+const poemUrl = new URL(Astro.url.pathname, 'https://sameeralsheikh.com').href;
+const poemSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'CreativeWork',
+	headline: poem.title,
+	description: poemDescription,
+	inLanguage: 'ar',
+	genre: categoryName,
+	...(poem.date ? { datePublished: poem.date } : {}),
+	author: { '@type': 'Person', name: 'سمير الشيخ حسين' },
+	url: poemUrl,
+	mainEntityOfPage: poemUrl,
+};
 ---
 
 <Layout
@@ -39,6 +52,7 @@ const poemDescription = full.length <= 160
 	description={poemDescription}
 	ogType="article"
 >
+	<script slot="head" type="application/ld+json" set:html={JSON.stringify(poemSchema)} />
 	<div class="page" data-poem-slug={poem.slug} data-poem-title={poem.title} data-first-sadr={poem.verses[0].sadr} data-first-ajz={poem.verses[0].ajz}>
 		<Header />
 

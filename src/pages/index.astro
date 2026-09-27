@@ -103,9 +103,14 @@ const heroVerse = featuredPoems[0]?.verses[0];
 
 	.hero-content {
 		text-align: center;
+		transition: opacity 1s ease, transform 1s ease;
+	}
+
+	/* Entrance animation runs only when JS is available (html.js class);
+	   without JS the hero stays fully visible. */
+	:global(.js) .hero-content {
 		opacity: 0;
 		transform: translateY(20px);
-		transition: opacity 1s ease, transform 1s ease;
 	}
 
 	.hero:global(.hero-visible) .hero-content {
@@ -114,7 +119,7 @@ const heroVerse = featuredPoems[0]?.verses[0];
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		.hero-content {
+		:global(.js) .hero-content {
 			opacity: 1;
 			transform: none;
 			transition: none;
