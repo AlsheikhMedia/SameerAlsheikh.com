@@ -74,20 +74,6 @@ const heroVerse = featuredPoems[0]?.verses[0];
 	</div>
 </Layout>
 
-<script>
-	const hero = document.querySelector('.hero');
-	if (hero) {
-		const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-		if (mediaQuery.matches) {
-			hero.classList.add('hero-visible');
-		} else {
-			requestAnimationFrame(() => {
-				hero.classList.add('hero-visible');
-			});
-		}
-	}
-</script>
-
 <style>
 	/* ---------- Hero Section ---------- */
 
@@ -103,26 +89,23 @@ const heroVerse = featuredPoems[0]?.verses[0];
 
 	.hero-content {
 		text-align: center;
-		transition: opacity 1s ease, transform 1s ease;
+		animation: hero-fade 0.8s ease both;
 	}
 
-	/* Entrance animation runs only when JS is available (html.js class);
-	   without JS the hero stays fully visible. */
-	:global(.js) .hero-content {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-
-	.hero:global(.hero-visible) .hero-content {
-		opacity: 1;
-		transform: translateY(0);
+	@keyframes hero-fade {
+		from {
+			opacity: 0.01;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		:global(.js) .hero-content {
-			opacity: 1;
-			transform: none;
-			transition: none;
+		.hero-content {
+			animation: none;
 		}
 	}
 

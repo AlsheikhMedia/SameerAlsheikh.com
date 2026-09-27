@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { poems, categories, type Poem } from '../../data/poems';
-import { toArabicDigits } from '../../lib/utils';
+import { toArabicDigits, jsonLd } from '../../lib/utils';
 
 export function getStaticPaths() {
 	return poems.map((poem, i) => ({
@@ -52,7 +52,7 @@ const poemSchema = {
 	description={poemDescription}
 	ogType="article"
 >
-	<script slot="head" type="application/ld+json" set:html={JSON.stringify(poemSchema)} />
+	<script slot="head" type="application/ld+json" set:html={jsonLd(poemSchema)} />
 	<div class="page" data-poem-slug={poem.slug} data-poem-title={poem.title} data-first-sadr={poem.verses[0].sadr} data-first-ajz={poem.verses[0].ajz}>
 		<Header />
 
